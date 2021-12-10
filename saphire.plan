@@ -1,0 +1,148 @@
+
+
+# terraform apply "saphire.plan"
+
+var.project_id
+  The project ID to host the cluster in
+
+  Enter a value: psai-334503
+
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.project-services.google_project_service.project_services["anthos.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "anthos.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["cloudresourcemanager.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "cloudresourcemanager.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["cloudtrace.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "cloudtrace.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["compute.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "compute.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["container.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "container.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["gkeconnect.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "gkeconnect.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["gkehub.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "gkehub.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["iam.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "iam.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["iamcredentials.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "iamcredentials.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["logging.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "logging.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["meshca.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "meshca.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["meshconfig.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "meshconfig.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["meshtelemetry.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "meshtelemetry.googleapis.com"
+    }
+
+  # module.project-services.google_project_service.project_services["monitoring.googleapis.com"] will be created
+  + resource "google_project_service" "project_services" {
+      + disable_dependent_services = true
+      + disable_on_destroy         = false
+      + id                         = (known after apply)
+      + project                    = "psai-334503"
+      + service                    = "monitoring.googleapis.com"
+    }
+
+Plan: 14 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + project = "psai-334503"
+
+------------------------------------------------------------------------# @Author: yourName

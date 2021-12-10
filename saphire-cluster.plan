@@ -1,0 +1,858 @@
+
+# terrafrom apply saphire-cluster.plan
+Terraform will perform the following actions:
+  # module.primary-cluster.google_container_cluster.primary will be created
+  + resource "google_container_cluster" "primary" {      + cluster_ipv4_cidr           = (known after apply)
+      + datapath_provider           = (known after apply)
+      + default_max_pods_per_node   = 110
+      + enable_binary_authorization = false
+      + enable_intranode_visibility = false
+      + enable_kubernetes_alpha     = false
+      + enable_l4_ilb_subsetting    = false
+      + enable_legacy_abac          = false
+      + enable_shielded_nodes       = true
+      + enable_tpu                  = false
+      + endpoint                    = (known after apply)
+      + id                          = (known after apply)
+      + instance_group_urls         = (known after apply)
+      + label_fingerprint           = (known after apply)
+      + location                    = "us-central1-a"
+      + logging_service             = "logging.googleapis.com/kubernetes"
+      + master_version              = (known after apply)
+      + monitoring_service          = "monitoring.googleapis.com/kubernetes"
+      + name                        = "primary"
+      + network                     = "projects/psai-334503/global/networks/default"
+      + networking_mode             = "VPC_NATIVE"
+      + node_locations              = (known after apply)
+      + node_version                = (known after apply)
+      + operation                   = (known after apply)
+      + private_ipv6_google_access  = (known after apply)
+      + project                     = "psai-334503"
+      + remove_default_node_pool    = false
+      + resource_labels             = {
+          + "mesh_id" = "proj-611468270089"
+        }
+      + self_link                   = (known after apply)
+      + services_ipv4_cidr          = (known after apply)
+      + subnetwork                  = "projects/psai-334503/regions/us-central1/subnetworks/default"
+      + tpu_ipv4_cidr_block         = (known after apply)
+
+      + addons_config {
+          + cloudrun_config {
+              + disabled           = (known after apply)
+              + load_balancer_type = (known after apply)
+            }
+
+          + config_connector_config {
+              + enabled = false
+            }
+
+          + dns_cache_config {
+              + enabled = false
+            }
+
+          + gce_persistent_disk_csi_driver_config {
+              + enabled = false
+            }
+
+          + horizontal_pod_autoscaling {
+              + disabled = false
+            }
+
+          + http_load_balancing {
+              + disabled = false
+            }
+
+          + istio_config {
+              + auth     = "AUTH_MUTUAL_TLS"
+              + disabled = true
+            }
+
+          + kalm_config {
+              + enabled = false
+            }
+
+          + network_policy_config {
+              + disabled = false
+            }
+        }
+
+      + authenticator_groups_config {
+          + security_group = (known after apply)
+        }
+
+      + cluster_autoscaling {
+          + autoscaling_profile = "BALANCED"
+          + enabled             = false
+
+          + auto_provisioning_defaults {
+              + min_cpu_platform = (known after apply)
+              + oauth_scopes     = (known after apply)
+              + service_account  = (known after apply)
+            }
+        }
+
+      + cluster_telemetry {
+          + type = (known after apply)
+        }
+
+      + confidential_nodes {
+          + enabled = (known after apply)
+        }
+
+      + database_encryption {
+          + state = "DECRYPTED"
+        }
+
+      + default_snat_status {
+          + disabled = false
+        }
+
+      + ip_allocation_policy {
+          + cluster_ipv4_cidr_block       = (known after apply)
+          + cluster_secondary_range_name  = (known after apply)
+          + services_ipv4_cidr_block      = (known after apply)
+          + services_secondary_range_name = (known after apply)
+        }
+
+      + logging_config {
+          + enable_components = (known after apply)
+        }
+
+      + maintenance_policy {
+          + daily_maintenance_window {
+              + duration   = (known after apply)
+              + start_time = "05:00"
+            }
+        }
+
+      + master_auth {
+          + client_certificate     = (known after apply)
+          + client_key             = (sensitive value)
+          + cluster_ca_certificate = (known after apply)
+
+          + client_certificate_config {
+              + issue_client_certificate = false
+            }
+        }
+
+      + monitoring_config {
+          + enable_components = (known after apply)
+        }
+
+      + network_policy {
+          + enabled  = true
+          + provider = "CALICO"
+        }
+
+      + node_config {
+          + boot_disk_kms_key = (known after apply)
+          + disk_size_gb      = (known after apply)
+          + disk_type         = (known after apply)
+          + guest_accelerator = (known after apply)
+          + image_type        = (known after apply)
+          + labels            = (known after apply)
+          + local_ssd_count   = (known after apply)
+          + machine_type      = (known after apply)
+          + metadata          = (known after apply)
+          + min_cpu_platform  = (known after apply)
+          + oauth_scopes      = (known after apply)
+          + preemptible       = (known after apply)
+          + service_account   = (known after apply)
+          + tags              = (known after apply)
+          + taint             = (known after apply)
+
+          + ephemeral_storage_config {
+              + local_ssd_count = (known after apply)
+            }
+
+          + kubelet_config {
+              + cpu_cfs_quota        = (known after apply)
+              + cpu_cfs_quota_period = (known after apply)
+              + cpu_manager_policy   = (known after apply)
+            }
+
+          + linux_node_config {
+              + sysctls = (known after apply)
+            }
+
+          + sandbox_config {
+              + sandbox_type = (known after apply)
+            }
+
+          + shielded_instance_config {
+              + enable_integrity_monitoring = (known after apply)
+              + enable_secure_boot          = (known after apply)
+            }
+
+          + workload_metadata_config {
+              + mode          = (known after apply)
+              + node_metadata = (known after apply)
+            }
+        }
+
+      + node_pool {
+          + initial_node_count  = 0
+          + instance_group_urls = (known after apply)
+          + max_pods_per_node   = (known after apply)
+          + name                = "default-pool"
+          + name_prefix         = (known after apply)
+          + node_count          = (known after apply)
+          + node_locations      = (known after apply)
+          + version             = (known after apply)
+
+          + management {
+              + auto_repair  = (known after apply)
+              + auto_upgrade = (known after apply)
+            }
+
+          + network_config {
+              + create_pod_range    = (known after apply)
+              + pod_ipv4_cidr_block = (known after apply)
+              + pod_range           = (known after apply)
+            }
+
+          + node_config {
+              + disk_size_gb      = (known after apply)
+              + disk_type         = (known after apply)
+              + guest_accelerator = (known after apply)
+              + image_type        = (known after apply)
+              + labels            = (known after apply)
+              + local_ssd_count   = (known after apply)
+              + machine_type      = (known after apply)
+              + metadata          = (known after apply)
+              + oauth_scopes      = (known after apply)
+              + preemptible       = false
+              + service_account   = (known after apply)
+              + taint             = (known after apply)
+
+              + shielded_instance_config {
+                  + enable_integrity_monitoring = (known after apply)
+                  + enable_secure_boot          = (known after apply)
+                }
+
+              + workload_metadata_config {
+                  + mode          = (known after apply)
+                  + node_metadata = "GKE_METADATA_SERVER"
+                }
+            }
+
+          + upgrade_settings {
+              + max_surge       = (known after apply)
+              + max_unavailable = (known after apply)
+            }
+        }
+
+      + notification_config {
+          + pubsub {
+              + enabled = false
+            }
+        }
+
+      + release_channel {
+          + channel = "REGULAR"
+        }
+
+      + timeouts {
+          + create = "45m"
+          + delete = "45m"
+          + update = "45m"
+        }
+
+      + vertical_pod_autoscaling {
+          + enabled = false
+        }
+
+      + workload_identity_config {
+          + identity_namespace = "psai-334503.svc.id.goog"
+        }
+    }
+
+  # module.primary-cluster.google_container_node_pool.pools["default-node-pool"] will be created
+  + resource "google_container_node_pool" "pools" {
+      + cluster             = "primary"
+      + id                  = (known after apply)
+      + initial_node_count  = (known after apply)
+      + instance_group_urls = (known after apply)
+      + location            = "us-central1-a"
+      + max_pods_per_node   = (known after apply)
+      + name                = "default-node-pool"
+      + name_prefix         = (known after apply)
+      + node_count          = 5
+      + node_locations      = (known after apply)
+      + operation           = (known after apply)
+      + project             = "psai-334503"
+      + version             = (known after apply)
+
+      + management {
+          + auto_repair  = true
+          + auto_upgrade = true
+        }
+
+      + network_config {
+          + create_pod_range    = (known after apply)
+          + pod_ipv4_cidr_block = (known after apply)
+          + pod_range           = (known after apply)
+        }
+
+      + node_config {
+          + disk_size_gb      = 100
+          + disk_type         = "pd-standard"
+          + guest_accelerator = []
+          + image_type        = "COS"
+          + labels            = {
+              + "cluster_name" = "primary"
+              + "node_pool"    = "default-node-pool"
+            }
+          + local_ssd_count   = 0
+          + machine_type      = "e2-standard-4"
+          + metadata          = {
+              + "cluster_name"             = "primary"
+              + "disable-legacy-endpoints" = "true"
+              + "node_pool"                = "default-node-pool"
+            }
+          + oauth_scopes      = [
+              + "https://www.googleapis.com/auth/cloud-platform",
+            ]
+          + preemptible       = false
+          + service_account   = (known after apply)
+          + tags              = [
+              + "gke-primary",
+              + "gke-primary-default-node-pool",
+            ]
+          + taint             = (known after apply)
+
+          + shielded_instance_config {
+              + enable_integrity_monitoring = true
+              + enable_secure_boot          = false
+            }
+
+          + workload_metadata_config {
+              + mode          = (known after apply)
+              + node_metadata = "GKE_METADATA_SERVER"
+            }
+        }
+
+      + timeouts {
+          + create = "45m"
+          + delete = "45m"
+          + update = "45m"
+        }
+
+      + upgrade_settings {
+          + max_surge       = 1
+          + max_unavailable = 0
+        }
+    }
+
+  # module.primary-cluster.google_project_iam_member.cluster_service_account-log_writer[0] will be created
+  + resource "google_project_iam_member" "cluster_service_account-log_writer" {
+      + etag    = (known after apply)
+      + id      = (known after apply)
+      + member  = (known after apply)
+      + project = "psai-334503"
+      + role    = "roles/logging.logWriter"
+    }
+
+  # module.primary-cluster.google_project_iam_member.cluster_service_account-metric_writer[0] will be created
+  + resource "google_project_iam_member" "cluster_service_account-metric_writer" {
+      + etag    = (known after apply)
+      + id      = (known after apply)
+      + member  = (known after apply)
+      + project = "psai-334503"
+      + role    = "roles/monitoring.metricWriter"
+    }
+
+  # module.primary-cluster.google_project_iam_member.cluster_service_account-monitoring_viewer[0] will be created
+  + resource "google_project_iam_member" "cluster_service_account-monitoring_viewer" {
+      + etag    = (known after apply)
+      + id      = (known after apply)
+      + member  = (known after apply)
+      + project = "psai-334503"
+      + role    = "roles/monitoring.viewer"
+    }
+
+  # module.primary-cluster.google_project_iam_member.cluster_service_account-resourceMetadata-writer[0] will be created
+  + resource "google_project_iam_member" "cluster_service_account-resourceMetadata-writer" {
+      + etag    = (known after apply)
+      + id      = (known after apply)
+      + member  = (known after apply)
+      + project = "psai-334503"
+      + role    = "roles/stackdriver.resourceMetadata.writer"
+    }
+
+  # module.primary-cluster.google_service_account.cluster_service_account[0] will be created
+  + resource "google_service_account" "cluster_service_account" {
+      + account_id   = (known after apply)
+      + disabled     = false
+      + display_name = "Terraform-managed service account for cluster primary"
+      + email        = (known after apply)
+      + id           = (known after apply)
+      + name         = (known after apply)
+      + project      = "psai-334503"
+      + unique_id    = (known after apply)
+    }
+
+  # module.primary-cluster.random_shuffle.available_zones will be created
+  + resource "random_shuffle" "available_zones" {
+      + id           = (known after apply)
+      + input        = [
+          + "us-central1-a",
+          + "us-central1-b",
+          + "us-central1-c",
+          + "us-central1-f",
+        ]
+      + result       = (known after apply)
+      + result_count = 3
+    }
+
+  # module.primary-cluster.random_string.cluster_service_account_suffix will be created
+  + resource "random_string" "cluster_service_account_suffix" {
+      + id          = (known after apply)
+      + length      = 4
+      + lower       = true
+      + min_lower   = 0
+      + min_numeric = 0
+      + min_special = 0
+      + min_upper   = 0
+      + number      = true
+      + result      = (known after apply)
+      + special     = false
+      + upper       = false
+    }
+
+  # module.secondary-cluster.google_container_cluster.primary will be created
+  + resource "google_container_cluster" "primary" {
+      + cluster_ipv4_cidr           = (known after apply)
+      + datapath_provider           = (known after apply)
+      + default_max_pods_per_node   = 110
+      + enable_binary_authorization = false
+      + enable_intranode_visibility = false
+      + enable_kubernetes_alpha     = false
+      + enable_l4_ilb_subsetting    = false
+      + enable_legacy_abac          = false
+      + enable_shielded_nodes       = true
+      + enable_tpu                  = false
+      + endpoint                    = (known after apply)
+      + id                          = (known after apply)
+      + instance_group_urls         = (known after apply)
+      + label_fingerprint           = (known after apply)
+      + location                    = "us-west1-b"
+      + logging_service             = "logging.googleapis.com/kubernetes"
+      + master_version              = (known after apply)
+      + monitoring_service          = "monitoring.googleapis.com/kubernetes"
+      + name                        = "secondary"
+      + network                     = "projects/psai-334503/global/networks/default"
+      + networking_mode             = "VPC_NATIVE"
+      + node_locations              = (known after apply)
+      + node_version                = (known after apply)
+      + operation                   = (known after apply)
+      + private_ipv6_google_access  = (known after apply)
+      + project                     = "psai-334503"
+      + remove_default_node_pool    = false
+      + resource_labels             = {
+          + "mesh_id" = "proj-611468270089"
+        }
+      + self_link                   = (known after apply)
+      + services_ipv4_cidr          = (known after apply)
+      + subnetwork                  = "projects/psai-334503/regions/us-west1/subnetworks/default"
+      + tpu_ipv4_cidr_block         = (known after apply)
+
+      + addons_config {
+          + cloudrun_config {
+              + disabled           = (known after apply)
+              + load_balancer_type = (known after apply)
+            }
+
+          + config_connector_config {
+              + enabled = false
+            }
+
+          + dns_cache_config {
+              + enabled = false
+            }
+
+          + gce_persistent_disk_csi_driver_config {
+              + enabled = false
+            }
+
+          + horizontal_pod_autoscaling {
+              + disabled = false
+            }
+
+          + http_load_balancing {
+              + disabled = false
+            }
+
+          + istio_config {
+              + auth     = "AUTH_MUTUAL_TLS"
+              + disabled = true
+            }
+
+          + kalm_config {
+              + enabled = false
+            }
+
+          + network_policy_config {
+              + disabled = false
+            }
+        }
+
+      + authenticator_groups_config {
+          + security_group = (known after apply)
+        }
+
+      + cluster_autoscaling {
+          + autoscaling_profile = "BALANCED"
+          + enabled             = false
+
+          + auto_provisioning_defaults {
+              + min_cpu_platform = (known after apply)
+              + oauth_scopes     = (known after apply)
+              + service_account  = (known after apply)
+            }
+        }
+
+      + cluster_telemetry {
+          + type = (known after apply)
+        }
+
+      + confidential_nodes {
+          + enabled = (known after apply)
+        }
+
+      + database_encryption {
+          + state = "DECRYPTED"
+        }
+
+      + default_snat_status {
+          + disabled = false
+        }
+
+      + ip_allocation_policy {
+          + cluster_ipv4_cidr_block       = (known after apply)
+          + cluster_secondary_range_name  = (known after apply)
+          + services_ipv4_cidr_block      = (known after apply)
+          + services_secondary_range_name = (known after apply)
+        }
+
+      + logging_config {
+          + enable_components = (known after apply)
+        }
+
+      + maintenance_policy {
+          + daily_maintenance_window {
+              + duration   = (known after apply)
+              + start_time = "05:00"
+            }
+        }
+
+      + master_auth {
+          + client_certificate     = (known after apply)
+          + client_key             = (sensitive value)
+          + cluster_ca_certificate = (known after apply)
+
+          + client_certificate_config {
+              + issue_client_certificate = false
+            }
+        }
+
+      + monitoring_config {
+          + enable_components = (known after apply)
+        }
+
+      + network_policy {
+          + enabled  = true
+          + provider = "CALICO"
+        }
+
+      + node_config {
+          + boot_disk_kms_key = (known after apply)
+          + disk_size_gb      = (known after apply)
+          + disk_type         = (known after apply)
+          + guest_accelerator = (known after apply)
+          + image_type        = (known after apply)
+          + labels            = (known after apply)
+          + local_ssd_count   = (known after apply)
+          + machine_type      = (known after apply)
+          + metadata          = (known after apply)
+          + min_cpu_platform  = (known after apply)
+          + oauth_scopes      = (known after apply)
+          + preemptible       = (known after apply)
+          + service_account   = (known after apply)
+          + tags              = (known after apply)
+          + taint             = (known after apply)
+
+          + ephemeral_storage_config {
+              + local_ssd_count = (known after apply)
+            }
+
+          + kubelet_config {
+              + cpu_cfs_quota        = (known after apply)
+              + cpu_cfs_quota_period = (known after apply)
+              + cpu_manager_policy   = (known after apply)
+            }
+
+          + linux_node_config {
+              + sysctls = (known after apply)
+            }
+
+          + sandbox_config {
+              + sandbox_type = (known after apply)
+            }
+
+          + shielded_instance_config {
+              + enable_integrity_monitoring = (known after apply)
+              + enable_secure_boot          = (known after apply)
+            }
+
+          + workload_metadata_config {
+              + mode          = (known after apply)
+              + node_metadata = (known after apply)
+            }
+        }
+
+      + node_pool {
+          + initial_node_count  = 0
+          + instance_group_urls = (known after apply)
+          + max_pods_per_node   = (known after apply)
+          + name                = "default-pool"
+          + name_prefix         = (known after apply)
+          + node_count          = (known after apply)
+          + node_locations      = (known after apply)
+          + version             = (known after apply)
+
+          + management {
+              + auto_repair  = (known after apply)
+              + auto_upgrade = (known after apply)
+            }
+
+          + network_config {
+              + create_pod_range    = (known after apply)
+              + pod_ipv4_cidr_block = (known after apply)
+              + pod_range           = (known after apply)
+            }
+
+          + node_config {
+              + disk_size_gb      = (known after apply)
+              + disk_type         = (known after apply)
+              + guest_accelerator = (known after apply)
+              + image_type        = (known after apply)
+              + labels            = (known after apply)
+              + local_ssd_count   = (known after apply)
+              + machine_type      = (known after apply)
+              + metadata          = (known after apply)
+              + oauth_scopes      = (known after apply)
+              + preemptible       = false
+              + service_account   = (known after apply)
+              + taint             = (known after apply)
+
+              + shielded_instance_config {
+                  + enable_integrity_monitoring = (known after apply)
+                  + enable_secure_boot          = (known after apply)
+                }
+
+              + workload_metadata_config {
+                  + mode          = (known after apply)
+                  + node_metadata = "GKE_METADATA_SERVER"
+                }
+            }
+
+          + upgrade_settings {
+              + max_surge       = (known after apply)
+              + max_unavailable = (known after apply)
+            }
+        }
+
+      + notification_config {
+          + pubsub {
+              + enabled = false
+            }
+        }
+
+      + release_channel {
+          + channel = "REGULAR"
+        }
+
+      + timeouts {
+          + create = "45m"
+          + delete = "45m"
+          + update = "45m"
+        }
+
+      + vertical_pod_autoscaling {
+          + enabled = false
+        }
+
+      + workload_identity_config {
+          + identity_namespace = "psai-334503.svc.id.goog"
+        }
+    }
+
+  # module.secondary-cluster.google_container_node_pool.pools["default-node-pool"] will be created
+  + resource "google_container_node_pool" "pools" {
+      + cluster             = "secondary"
+      + id                  = (known after apply)
+      + initial_node_count  = (known after apply)
+      + instance_group_urls = (known after apply)
+      + location            = "us-west1-b"
+      + max_pods_per_node   = (known after apply)
+      + name                = "default-node-pool"
+      + name_prefix         = (known after apply)
+      + node_count          = 5
+      + node_locations      = (known after apply)
+      + operation           = (known after apply)
+      + project             = "psai-334503"
+      + version             = (known after apply)
+
+      + management {
+          + auto_repair  = true
+          + auto_upgrade = true
+        }
+
+      + network_config {
+          + create_pod_range    = (known after apply)
+          + pod_ipv4_cidr_block = (known after apply)
+          + pod_range           = (known after apply)
+        }
+
+      + node_config {
+          + disk_size_gb      = 100
+          + disk_type         = "pd-standard"
+          + guest_accelerator = []
+          + image_type        = "COS"
+          + labels            = {
+              + "cluster_name" = "secondary"
+              + "node_pool"    = "default-node-pool"
+            }
+          + local_ssd_count   = 0
+          + machine_type      = "e2-standard-4"
+          + metadata          = {
+              + "cluster_name"             = "secondary"
+              + "disable-legacy-endpoints" = "true"
+              + "node_pool"                = "default-node-pool"
+            }
+          + oauth_scopes      = [
+              + "https://www.googleapis.com/auth/cloud-platform",
+            ]
+          + preemptible       = false
+          + service_account   = (known after apply)
+          + tags              = [
+              + "gke-secondary",
+              + "gke-secondary-default-node-pool",
+            ]
+          + taint             = (known after apply)
+
+          + shielded_instance_config {
+              + enable_integrity_monitoring = true
+              + enable_secure_boot          = false
+            }
+
+          + workload_metadata_config {
+              + mode          = (known after apply)
+              + node_metadata = "GKE_METADATA_SERVER"
+            }
+        }
+
+      + timeouts {
+          + create = "45m"
+          + delete = "45m"
+          + update = "45m"
+        }
+
+      + upgrade_settings {
+          + max_surge       = 1
+          + max_unavailable = 0
+        }
+    }
+
+  # module.secondary-cluster.google_project_iam_member.cluster_service_account-log_writer[0] will be created
+  + resource "google_project_iam_member" "cluster_service_account-log_writer" {
+      + etag    = (known after apply)
+      + id      = (known after apply)
+      + member  = (known after apply)
+      + project = "psai-334503"
+      + role    = "roles/logging.logWriter"
+    }
+
+  # module.secondary-cluster.google_project_iam_member.cluster_service_account-metric_writer[0] will be created
+  + resource "google_project_iam_member" "cluster_service_account-metric_writer" {
+      + etag    = (known after apply)
+      + id      = (known after apply)
+      + member  = (known after apply)
+      + project = "psai-334503"
+      + role    = "roles/monitoring.metricWriter"
+    }
+
+  # module.secondary-cluster.google_project_iam_member.cluster_service_account-monitoring_viewer[0] will be created
+  + resource "google_project_iam_member" "cluster_service_account-monitoring_viewer" {
+      + etag    = (known after apply)
+      + id      = (known after apply)
+      + member  = (known after apply)
+      + project = "psai-334503"
+      + role    = "roles/monitoring.viewer"
+    }
+
+  # module.secondary-cluster.google_project_iam_member.cluster_service_account-resourceMetadata-writer[0] will be created
+  + resource "google_project_iam_member" "cluster_service_account-resourceMetadata-writer" {
+      + etag    = (known after apply)
+      + id      = (known after apply)
+      + member  = (known after apply)
+      + project = "psai-334503"
+      + role    = "roles/stackdriver.resourceMetadata.writer"
+    }
+
+  # module.secondary-cluster.google_service_account.cluster_service_account[0] will be created
+  + resource "google_service_account" "cluster_service_account" {
+      + account_id   = (known after apply)
+      + disabled     = false
+      + display_name = "Terraform-managed service account for cluster secondary"
+      + email        = (known after apply)
+      + id           = (known after apply)
+      + name         = (known after apply)
+      + project      = "psai-334503"
+      + unique_id    = (known after apply)
+    }
+
+  # module.secondary-cluster.random_shuffle.available_zones will be created
+  + resource "random_shuffle" "available_zones" {
+      + id           = (known after apply)
+      + input        = [
+          + "us-west1-a",
+          + "us-west1-b",
+          + "us-west1-c",
+        ]
+      + result       = (known after apply)
+      + result_count = 3
+    }
+
+  # module.secondary-cluster.random_string.cluster_service_account_suffix will be created
+  + resource "random_string" "cluster_service_account_suffix" {
+      + id          = (known after apply)
+      + length      = 4
+      + lower       = true
+      + min_lower   = 0
+      + min_numeric = 0
+      + min_special = 0
+      + min_upper   = 0
+      + number      = true
+      + result      = (known after apply)
+      + special     = false
+      + upper       = false
+    }
+
+  # module.primary-cluster.module.gcloud_delete_default_kube_dns_configmap.module.gcloud_kubectl.null_resource.module_depends_on[0] will be created
+  + resource "null_resource" "module_depends_on" {
+      + id       = (known after apply)
+      + triggers = {
+          + "value" = "3"
+        }
+    }
+
+  # module.secondary-cluster.module.gcloud_delete_default_kube_dns_configmap.module.gcloud_kubectl.null_resource.module_depends_on[0] will be created
+  + resource "null_resource" "module_depends_on" {
+      + id       = (known after apply)
+      + triggers = {
+          + "value" = "3"
+        }
+    }
