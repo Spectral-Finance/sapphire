@@ -8,4 +8,4 @@ Saphire : is the base cluster which is configured on Google Kubernetes engine - 
 
  # this repository contains production ready code : DO not make changes to scripts and it requires Approval 
 
- # To- DO : spectral-hub  on wards ( requested for qupta increase from google on 12/09/21)
+ # To- DO : spectral-hub  on wards ( requested for quota increase from google on 12/09/21)
